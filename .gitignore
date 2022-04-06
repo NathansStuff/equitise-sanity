@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/equitisesanity/node_modules
+/equitisesanity/plugins
+/equitisesanity/config
 
 # testing
 /coverage
