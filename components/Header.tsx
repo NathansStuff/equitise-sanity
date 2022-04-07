@@ -69,8 +69,12 @@ function Header() {
         </div>
 
         <div className='hidden items-center space-x-5 lg:inline-flex'>
-          <h1>Login</h1>
-          <h1>Register</h1>
+          <h1 className='rounded-lg border border-white py-2 px-4 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-secondary'>
+            Login
+          </h1>
+          <h1 className='rounded-lg bg-secondary py-2 px-4 transition duration-300 hover:-translate-y-1 hover:bg-blue-700'>
+            Register
+          </h1>
         </div>
       </div>
       {/* {Small Screen Navigation Popup} */}
@@ -85,8 +89,14 @@ function Header() {
           {Object.entries(Links).map(([k, v]) => (
             <NavigationItems header={k} subLinks={v} />
           ))}
-          <h1>Login</h1>
-          <h1>Register</h1>
+          <div className='flex justify-center space-x-5 pt-5'>
+            <h1 className='flex w-32 justify-center rounded-lg border border-white py-2 px-4 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-secondary'>
+              Login
+            </h1>
+            <h1 className='flex w-32 justify-center rounded-lg bg-secondary py-2 px-4 transition duration-300 hover:-translate-y-1 hover:bg-blue-700'>
+              Register
+            </h1>
+          </div>
         </div>
       </div>
     </header>
@@ -106,7 +116,7 @@ function NavigationItems({ header, subLinks }: Links) {
   // Get all the sublinks into an array
   subLinks.map((subLink) =>
     subs.push(
-      <div className='nav-links max-h-0 overflow-hidden bg-secondary transition-all duration-500 peer-checked:max-h-40'>
+      <div className='nav-links max-h-0 overflow-hidden bg-secondary transition-all duration-500 hover:underline peer-checked:max-h-40'>
         <div className='p-4 text-lg text-white '>
           <p>{subLink}</p>
         </div>
@@ -114,7 +124,7 @@ function NavigationItems({ header, subLinks }: Links) {
     )
   );
   return (
-    <div className='relative '>
+    <div className='relative pt-5 pb-5'>
       {/* Invisible checkbox for stateless dynamic change */}
       <input
         type='checkbox'
