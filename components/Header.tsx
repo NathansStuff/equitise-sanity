@@ -30,11 +30,9 @@ function Header() {
         </Link>
         {/* {Hamburger Menu} */}
         <button
-          className='group flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-black lg:hidden'
+          className='group flex h-12 w-12 flex-col items-center justify-center rounded border-2 border-white md:hidden'
           onClick={() => setNav()}
         >
-          {/* {Expanding Circle} */}
-
           {/* {Hamburger Item} */}
           <div
             className={`${genericHamburgerLine} ${
@@ -61,14 +59,14 @@ function Header() {
           <div className={` ${showNav ? 'circle-div bg-primary' : ''}`} />
         </button>
         {/* {Large Screen Nav} */}
-        <div className='hidden items-center space-x-5 text-lg lg:inline-flex'>
+        <div className='hidden items-center space-x-5 text-lg md:inline-flex'>
           {' '}
           {Object.entries(Links).map(([k, v]) => (
             <LargeNavigationItems header={k} subLinks={v} />
           ))}
         </div>
 
-        <div className='hidden items-center space-x-5 lg:inline-flex'>
+        <div className='hidden items-center space-x-5 md:inline-flex'>
           <h1 className='rounded-lg border border-white py-2 px-4 transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-secondary'>
             Login
           </h1>
@@ -173,10 +171,10 @@ function LargeNavigationItems({ header, subLinks }: Links) {
       <div className='group'>
         {/* {Triangle} */}
         <div className='absolute top-7 hidden w-16  overflow-hidden group-hover:inline-block'>
-          <div className=' h-3 w-3 origin-bottom-left rotate-45 transform bg-red-700'></div>
+          <div className=' h-3 w-3 origin-bottom-left rotate-45 transform bg-secondary'></div>
         </div>
         <h1 className=''>{header}</h1>
-        <div className='absolute right-[-190px] top-[40px] hidden w-[300px] cursor-pointer flex-col space-y-5 rounded-md bg-red-700 p-5 group-hover:flex'>
+        <div className='absolute right-[-190px] top-[40px] hidden w-[300px] cursor-pointer flex-col space-y-5 rounded-md bg-secondary p-5 group-hover:flex'>
           {subs}
         </div>
       </div>{' '}
