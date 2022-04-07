@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "tailwind": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css",
     "build": "next build",
     "start": "next start"
   },

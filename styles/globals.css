@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes anim {
+ 0% { clip-path: circle(0% at 100% 0%); }
+ 100% { clip-path: circle(150%); }
+}
+
+.circle-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  animation-name: anim;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  z-index: 2;
+}
+@keyframes nav {
+  0%   {height: 0; opacity: 0; padding: 0}
+  90%   {height: 0; opacity: 0; padding: 0}
+  100% {height: 100;}
+}
+.nav-links {
+  animation-name: nav;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
